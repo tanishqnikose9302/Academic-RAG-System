@@ -18,3 +18,26 @@ if st.button('Search'):
     results = pipeline.answer_query(query)
     for r in results:
         st.write(r)
+if st.button("Get Answer"):
+
+    result = pipeline.answer_query(
+        query
+    )
+
+    st.subheader("Answer")
+
+    st.write(
+        result["answer"]
+    )
+
+    st.subheader("Sources")
+
+    for idx, source in enumerate(
+        result["sources"]
+    ):
+
+        st.markdown(
+            f"### Source {idx+1}"
+        )
+
+        st.write(source)
