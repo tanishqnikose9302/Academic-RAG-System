@@ -3,6 +3,7 @@ from src.chunker import TextChunker
 from src.embeddings import EmbeddingModel
 from src.vector_store import VectorStore
 from src.retriever import Retriever
+from src.llm_local import LocalLLM
 
 class RAGPipeline:
     def __init__(self):
